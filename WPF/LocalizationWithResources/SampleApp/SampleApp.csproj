@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\SampleAppLocales.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SampleAppLocales.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\SampleAppLocales.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SampleAppLocales.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

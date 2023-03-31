@@ -7,4 +7,4 @@ Whether you're a seasoned developer or just starting out, hopefully this collect
 
 ## Contents
 
-- WPF/ - contains C# samples for WPF. 
+- WPF - contains C# samples for WPF. 
