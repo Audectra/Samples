@@ -6,3 +6,4 @@ A collection of C# samples that share some useful patterns or techniques when wo
 
 - ConverterAsMarkupExtension/ - Technique that allows you to directly use converters without having to add them to the resources first. 
 
+- VisualStatesWithSetters/ - Technique that allows you to use dynamic content or bindings in visual states of custom controls. 
