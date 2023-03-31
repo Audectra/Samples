@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SampleApp.Common\SampleApp.Common.csproj" />
+      <ProjectReference Include="..\SampleApp.Modules.Core\SampleApp.Modules.Core.csproj" />
+      <ProjectReference Include="..\SampleApp.Modules.SampleA\SampleApp.Modules.SampleA.csproj" />
+      <ProjectReference Include="..\SampleApp.Modules.SampleB\SampleApp.Modules.SampleB.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Views\MainWindowView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+      <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    </ItemGroup>
+
+</Project>

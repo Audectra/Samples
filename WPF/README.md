@@ -10,3 +10,4 @@ A collection of C# samples that share some useful patterns or techniques when wo
 
 - LocalizationWithResources - Technique that allows you to dynamically localize your application with content from resources. 
 
+- ModularRxTemplate - Modular template for applications with Prism, ReactiveUi and built-in localization. Can be used to kick-start a new WPF application. 

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>SampleApp.Modules.SampleB</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SampleApp.Modules.Core\SampleApp.Modules.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\SampleBLocales.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SampleBLocales.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\SampleBLocales.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ModuleBLocales.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

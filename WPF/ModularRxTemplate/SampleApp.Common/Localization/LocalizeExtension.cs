@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace SampleApp.Localization;
+namespace SampleApp.Common.Localization;
 
 public class LocalizeExtension : MarkupExtension
 {
@@ -14,7 +14,7 @@ public class LocalizeExtension : MarkupExtension
     {
         ResourceKey = string.Empty;
     }
-
+    
     public LocalizeExtension(string resourceKey)
     {
         ResourceKey = resourceKey;
