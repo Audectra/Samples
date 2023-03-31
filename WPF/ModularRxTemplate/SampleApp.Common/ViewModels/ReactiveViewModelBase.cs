@@ -22,7 +22,7 @@ public class ReactiveViewModelBase : ReactiveObject
         IReactiveObjectExtensions.RaisePropertyChanged(this, propertyName);
 
     /* Some UI frameworks for WPF require the property changes to be propagated via the main UI thread.
-     * If your UI framework has such an requirement, then simply use this method instead of the above one. 
+     * If your UI framework has such a requirement, then simply use this method instead of the above one. 
     protected void RaisePropertyChanged([CallerMemberName] string? propertyName = null) =>
         RxApp.MainThreadScheduler.Schedule(() => IReactiveObjectExtensions.RaisePropertyChanged(this, propertyName));
     */
