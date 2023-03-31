@@ -1,5 +1,5 @@
 # Converter as Markup Extension
-Technique that tallows you to directly use converters without having to add them to the resources first. 
+Technique that allows you to directly use converters without having to add them to the resources first. 
 
 While this is an incredibly convenient way of working with converters, I will have to point out, that this approach creates more instances of converters than the regular approach. In most scenarios this doesn't make much of a difference, especially when your converters are small (as they should be) anyway. However, keep that in mind, when dealing with "big" converters that take up more resources (for whatever legacy reason), or when your view needs a ton of converters. 
 
