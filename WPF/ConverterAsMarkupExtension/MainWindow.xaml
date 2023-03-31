@@ -1,0 +1,29 @@
+﻿<Window x:Class="SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleApp"
+        xmlns:converters="clr-namespace:SampleApp.Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <!-- The regular converter needs to be explicitly added to the resources, before it can be used. -->
+            <converters:ToUpperStringRegularConverter x:Key="RegularConverter" />
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- For the regular converter, we need to reference it as a resource. -->
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16"
+                   Text="{Binding Source=I have been converted the normal way., Converter={StaticResource RegularConverter}}" />
+        
+        <!-- The markup converter can be used directly without any resource reference. -->
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16"
+                   Text="{Binding Source=I have been converted the markup way., Converter={converters:ToUpperStringMarkupConverter}}" />
+    </Grid>
+</Window>
