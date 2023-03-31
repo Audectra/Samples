@@ -1,0 +1,25 @@
+﻿<Window x:Class="SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleApp" mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <!-- We can skip the namespace for this converter, because we have exported it to a global namespace. -->
+            <ToUpperStringConverter x:Key="ToUpperConverter" />
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" TextAlignment="Center" FontSize="16"
+                   Text="{Binding Source=I have been converted., Converter={StaticResource ToUpperConverter}}" />
+        
+        <!-- We can skip the namespace for this control, because we have exported it to a global namespace. -->
+        <SampleControl Grid.Row="1" Margin="4" />
+    </Grid>
+</Window>
